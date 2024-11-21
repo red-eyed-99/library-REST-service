@@ -15,7 +15,9 @@ public class JsonResponsePrinter {
 
         var mapper = new ObjectMapper();
 
-        var jsonResponse = mapper.writeValueAsString(object);
+        var jsonResponse = mapper
+                .writerWithDefaultPrettyPrinter()
+                .writeValueAsString(object);
 
         printWriter.print(jsonResponse);
         printWriter.flush();

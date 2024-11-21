@@ -24,7 +24,9 @@ abstract class BaseServletTest {
     void verifyResponsePrinted(Object expectedResponse) throws JsonProcessingException {
         var mapper = new ObjectMapper();
 
-        var jsonResponse = mapper.writeValueAsString(expectedResponse);
+        var jsonResponse = mapper
+                .writerWithDefaultPrettyPrinter()
+                .writeValueAsString(expectedResponse);
 
         verify(printWriter).print(jsonResponse);
     }
