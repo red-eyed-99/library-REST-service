@@ -1,0 +1,7 @@
+### Get all reviews for book
+GET http://localhost:8080/library/books/1/reviews
+
+### Add new review for book
+POST http://localhost:8080/library/books/1/reviews?reader-id=1&content=good
+
+

@@ -1,0 +1,17 @@
+### Get all readers
+GET http://localhost:8080/library/readers
+
+### Get reader by ID
+GET http://localhost:8080/library/readers/1
+
+### Add new reader
+POST http://localhost:8080/library/readers?first-name=Ivan&last-name=Ivanov&phone=%2b7(989)-564-09-88
+
+### Add book to reader
+POST http://localhost:8080/library/readers/1/books/1
+
+### Update reader phone by id
+PATCH http://localhost:8080/library/readers/1?phone=%2b7(110)-991-19-99
+
+### Delete reader by ID
+DELETE http://localhost:8080/library/readers/1

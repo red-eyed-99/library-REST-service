@@ -1,0 +1,11 @@
+### Get all books
+GET http://localhost:8080/library/books
+
+### Get book by ID
+GET http://localhost:8080/library/books/1
+
+### Add new book
+POST http://localhost:8080/library/books?title=World&publish-year=2014&authors=1&authors=2
+
+### Delete book by ID
+DELETE http://localhost:8080/library/books/1

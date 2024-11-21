@@ -1,0 +1,14 @@
+### Get all authors
+GET http://localhost:8080/library/authors
+
+### Get author by ID
+GET http://localhost:8080/library/authors/1
+
+### Add new author
+POST http://localhost:8080/library/authors?first-name=Ivan&last-name=Ivanov
+
+### Update author first name and last name by ID
+PATCH http://localhost:8080/library/authors/1?first-name=Petr&last-name=Petrov
+
+### Delete author by ID
+DELETE http://localhost:8080/library/authors/1

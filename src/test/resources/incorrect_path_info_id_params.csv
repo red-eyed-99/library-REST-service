@@ -1,0 +1,5 @@
+PATH_INFO_ID, ERROR_MESSAGE
+/-1, id must be a positive number,
+/0, id must be a positive number,
+/bad, id must be a number,
+/, Missing id parameter
