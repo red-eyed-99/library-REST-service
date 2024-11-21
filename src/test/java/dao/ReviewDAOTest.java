@@ -48,7 +48,13 @@ public class ReviewDAOTest extends BaseDAOTest {
     void shouldReturnAllBookReviewsFromDatabase() throws SQLException {
         var expectedReviews = new HashSet<Review>();
 
-        var book = new Book.BookBuilder("dummy", 1111).build();
+        var author = new Author.AuthorBuilder("dummy", "dummy").build();
+
+        authorDAO.create(author);
+
+        var book = new Book.BookBuilder("dummy", 1111)
+                .setAuthors(Set.of(author))
+                .build();
 
         bookDAO.create(book);
 
