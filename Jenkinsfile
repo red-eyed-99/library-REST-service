@@ -28,8 +28,8 @@ pipeline {
             steps {
 		echo 'Deploy...'
                 bat '''
-                scp -i "${env.SSH_KEY}" -F "${env.SSH_CONFIG}" target/library.war vuser@192.168.1.100:/tmp/
-                ssh -i "${env.SSH_KEY}" -F "${env.SSH_CONFIG}" vuser@192.168.1.100 /usr/local/bin/deploy.sh /tmp/library.war
+                scp -i "C:\\ProgramData\\Jenkins\\.ssh\\jenkins" -F "C:\\ProgramData\\Jenkins\\.ssh\\config" target/library.war vuser@192.168.1.100:/tmp/
+                ssh -i "C:\\ProgramData\\Jenkins\\.ssh\\jenkins" -F "C:\\ProgramData\\Jenkins\\.ssh\\config" vuser@192.168.1.100 /usr/local/bin/deploy.sh /tmp/library.war
                 '''
             }
         }
