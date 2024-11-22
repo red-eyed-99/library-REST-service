@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-	SSH_KEY = 'C:\ProgramData\Jenkins\.ssh\jenkins'
-	SSH_CONFIG = 'C:\ProgramData\Jenkins\.ssh\config'
+	SSH_KEY = 'C:/ProgramData/Jenkins/.ssh/jenkins'
+	SSH_CONFIG = 'C:/ProgramData/Jenkins/.ssh/config'
     }
 	
     tools {
