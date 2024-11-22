@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+	maven 'Maven'
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -11,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
 		echo 'Build...'
-                bat 'mvn clean package'
+                bat "${tool 'Maven'}/bin/mvn clean package"
             }
         }
 
