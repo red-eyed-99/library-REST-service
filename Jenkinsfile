@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-	SSH_KEY = 'C:/ProgramData/Jenkins/.ssh/jenkins'
-	SSH_CONFIG = 'C:/ProgramData/Jenkins/.ssh/config'
-    }
 	
     tools {
 	maven 'Maven'
@@ -28,7 +24,7 @@ pipeline {
             steps {
 		echo 'Deploy...'
                 bat '''
-                scp -i C:\\\\ProgramData\\\\Jenkins\\\\.ssh\\\\jenkins target/library.war vuser@192.168.1.100:/tmp/
+                scp -i %SSH_KEY% target/library.war vuser@192.168.1.100:/tmp/
                 ssh -F C:\\ProgramData\\Jenkins\\.ssh\\config vm vuser@192.168.1.100 /usr/local/bin/deploy.sh /tmp/library.war
                 '''
             }
