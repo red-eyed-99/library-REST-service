@@ -28,7 +28,7 @@ pipeline {
             steps {
 		echo 'Deploy...'
                 bat '''
-                scp -i C:\\ProgramData\\Jenkins\\.ssh\\jenkins target/library.war vuser@192.168.1.100:/tmp/
+                scp -i C:/ProgramData/Jenkins/.ssh/jenkins target/library.war vuser@192.168.1.100:/tmp/
                 ssh -F C:\\ProgramData\\Jenkins\\.ssh\\config vm vuser@192.168.1.100 /usr/local/bin/deploy.sh /tmp/library.war
                 '''
             }
